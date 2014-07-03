@@ -15,8 +15,7 @@ cd docker-riak-benchmarking
 ##### Download the Riak and Basho Bench images
 
 ```
-make pull-docker-riak
-# You can also test Riak 2.0 pre-release with: make pull-docker-riak2.0
+make pull-docker-riak-simple
 make pull-docker-basho-bench
 ```
 
@@ -35,7 +34,7 @@ make build
 or
 
 ```
-make build-docker-riak
+make build-docker-riak-simple
 make build-docker-basho-bench
 ```
 
@@ -80,7 +79,7 @@ make start
 or
 
 ```
-make start-docker-riak
+make start-docker-riak-simple
 make start-docker-basho-bench TESTS="preload.config http10read1write.config"
 ```
 
@@ -93,7 +92,7 @@ make status
 This should result in output similar to this:
 
 ```
-A container with image=bench/riak is currently running at [http://localhost:49154/ping]
+Riak is running at [http://localhost:49154]
 Basho Bench is currently serving a report at [http://localhost:49156/reports/current/]
 ```
 
